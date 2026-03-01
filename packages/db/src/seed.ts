@@ -94,8 +94,9 @@ if (period && !/^\d{4}-\d{2}$/.test(period)) {
   console.error("--period must be in YYYY-MM format (e.g., --period=2026-03)");
   process.exit(1);
 }
-const YEAR_END = period ? Number(period.split("-")[0]) : 2026;
-const MONTH_END = period ? Number(period.split("-")[1]) : 2;
+const currentDate = new Date();
+const YEAR_END = period ? Number(period.split("-")[0]) : currentDate.getFullYear();
+const MONTH_END = period ? Number(period.split("-")[1]) : currentDate.getMonth() + 1;
 const today = new Date(dateStr(YEAR_END, MONTH_END, FIXED_DAY));
 FIXED_TIMESTAMP = `${dateStr(YEAR_END, MONTH_END, FIXED_DAY)}T00:00:00.000Z`;
 
