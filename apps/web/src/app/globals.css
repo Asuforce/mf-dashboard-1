@@ -149,6 +149,8 @@
   --color-asset-fund: oklch(0.74 0.16 47);
   --color-asset-insurance: oklch(0.72 0.183 4);
   --color-asset-pension: oklch(0.73 0.094 193);
+  --color-asset-crypto: oklch(0.73 0.155 293);
+  --color-asset-prepaid: oklch(0.72 0.086 186);
   --color-asset-point: oklch(0.73 0.2 319);
 
   --color-cat-cash-card: oklch(0.74 0.108 59);
